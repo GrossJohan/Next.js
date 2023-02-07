@@ -78,15 +78,19 @@ export default function Start({ countries }) {
           <p>Ever wondered how to write a function that prints Hello World?</p>
           <button onClick={() => setIsModalOpen(true)}>Show Me</button>
           <CodeSampleModal
-            {
-              isModalOpen && (
-                <CodeSampleModal
-                  isOpen={isModalOpen}
-                  closeModal={() => setIsModalOpen(false)}
-                />
-              );
-            }
+            isOpen={isModalOpen}
+            closeModal={() => setIsModalOpen(false)}
           />
+{/*
+          {
+              isModalOpen && (
+                  <CodeSampleModal
+                      isOpen={isModalOpen}
+                      closeModal={() => setIsModalOpen(false)}
+                  />
+              );
+          }
+          */}
         </div>
       </main>
 
